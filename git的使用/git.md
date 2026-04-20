@@ -1,4 +1,4 @@
-# 打开git
+git # 打开git
 找到要上传的文件
 
 ![alt text](微信图片_20260410210108_853_53.png)
@@ -152,6 +152,64 @@ git pull origin main --allow-unrelated-histories
 然后再push
 
 ![alt text](微信图片_20260410212539_877_53.png)
+
+
+# 更新内容
+
+## 查看文件状态
+
+~~~
+git status      //查看哪些文件发生了变化，或者是哪些文件是新增的
+~~~
+
+例如
+
+~~~
+HP@JOKER MINGW64 /d/ubuntu16.04/github (main) $ git status 
+On branch main 
+Your branch is up to date with 'origin/main'. 
+
+Changes to be committed: (use "git restore --staged <file>..." to unstage) 
+    new file: drawBMP/1.bmp
+    new file: drawBMP/bmp 
+    new file: drawBMP/drawBMP.c
+    new file: mmaplcd/a 
+     new file: mmaplcd/b 
+    new file: mmaplcd/m 
+    new file: "mmaplcd/mmaplcd\345\261\217.c" 
+    deleted: note.zip
+~~~
+
+* 新增文件（new file）: drawBMP/1.bmp, drawBMP/bmp, drawBMP/drawBMP.c 等。
+* 删除文件（deleted）: note.zip 被删除。
+
+## 添加文件到暂存区
+
+~~~
+git add .
+~~~
+
+~~~
+git add 文件名      //单独添加某个文件
+~~~
+
+## 提交更改
+
+~~~
+git commit -m "提交信息"
+~~~
+
+例如
+
+~~~
+git commit -m "添加了新的bmp图像文件，删除了note.zip文件"
+~~~
+
+## 推送到远程仓库
+
+~~~
+git push
+~~~
 
 
 
